@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const ejs = require('ejs');
 const getResult = require('./weatherApi');
 const https = require('https');
+const port = process.env.PORT || 3000;
 //const getResult = require('./weatherApi');
 
 const app = express();
@@ -66,7 +67,7 @@ app.post("/weather",function(req,res){
 	// -------------------------------
 });
 
-app.listen(3000,function(){
+app.listen(port,function(){
 	console.log("Server is running on port 3000");
 });
 
